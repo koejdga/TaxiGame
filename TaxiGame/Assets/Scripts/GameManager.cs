@@ -10,24 +10,27 @@ public class GameManager : MonoBehaviour
     public GameObject GameOver;
     public GameObject WinCanvas;
     public GameObject PauseCanvas;
-    public Transform Car;
+
     public Transform Trigger;
     public Transform RedCube;
     public static bool GameIsPaused = false;
     public GameObject pauseMenu;
     public bool GameIsRunning = false;
     private static int Level;
-    bool FirstLoading = true;
 
-    // public Transform[] TriggerPositions = new Transform[6];
-    public Transform[] FinishPositions = new Transform[6];
+    public GameObject[] Cars = new GameObject[6];
+    private GameObject CurrentCar;
 
-    public Transform[] CarPositions = new Transform[6];
+    public GameObject[] Triggers = new GameObject[6];
+    private GameObject CurrentTrigger;
+
+    public GameObject[] RedCubes = new GameObject[6];
+    private GameObject CurrentCube;
 
     public Image CurrentLevel;
     public Sprite[] Maps = new Sprite[6];
 
-
+    public bool FirstLoading;
 
 
     void Start()
@@ -42,25 +45,39 @@ public class GameManager : MonoBehaviour
 
         Time.timeScale = 0;
         Level = LevelMenu.Level;
-        
+
+        CurrentCar = Cars[1];
+        CurrentCube = RedCubes[1];
+        CurrentTrigger = Triggers[1];
+
         SetLevel(Level);
     }
 
     public void SetLevel(int Level)
     {
+        CurrentCar.SetActive(false);
+        CurrentCube.SetActive(false);
+        CurrentTrigger.SetActive(false);
+
         CurrentLevel.sprite = Maps[Level];
-        Car = CarPositions[Level];
-        Trigger = FinishPositions[Level];
-        RedCube = FinishPositions[Level];
+
+        Cars[Level].SetActive(true);
+        RedCubes[Level].SetActive(true);
+        Triggers[Level].SetActive(true);
+
+        CurrentCar = Cars[Level];
+        CurrentCube = RedCubes[Level];
+        CurrentTrigger = Triggers[Level];
+
+        Debug.Log(CurrentCar);
+        Debug.Log(Cars[Level]);
+        Debug.Log("Hello world");
 
     }
 
 
     void Update()
     {
-        Debug.Log(Car.position.x);
-        Debug.Log(Car.position.y);
-        Debug.Log(Car.position.z);
         if (Input.GetKeyDown(KeyCode.Space))
         { 
             if (YouHaveAnOrder.activeSelf)
@@ -77,12 +94,10 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        if (Car.position.y < 29)
+        if (CurrentCar.transform.position.y < 29)
         {
             GameOver.SetActive(true);
-            Debug.Log(GameOver.activeSelf + " - чи активна сцена");
         }
-
 
         if (GameIsRunning)
         {
@@ -147,40 +162,4 @@ public class GameManager : MonoBehaviour
 
 
     
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-class LevelData
-{
-    int numberOfLevels = 5;
-
-    public Image CurrentLevel;
-    public Sprite[] levels = new Sprite[5];
-    public Transform[] car = new Transform[5];
-    public Transform[] trigger = new Transform[5];
-    public Transform[] redPoint = new Transform[5];
-
-
-    LevelData()
-    {
-        
-    }
-
-
 }

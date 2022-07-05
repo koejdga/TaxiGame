@@ -4,7 +4,6 @@ using UnityEngine.UI;
 
 public class LevelMenu : MonoBehaviour
 {
-    private Scene GameScene;
     public static int Level;
     public int LevelParameter;
     public Button level1;
@@ -12,7 +11,6 @@ public class LevelMenu : MonoBehaviour
     public Button level3;
     public Button level4;
     public Button level5;
-    // public GameManager GameManager = FindObjectOfType<GameManager>();
 
     private void Awake()
     {
