@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,15 +11,28 @@ public class GameManager : MonoBehaviour
     public GameObject WinCanvas;
     public GameObject PauseCanvas;
     public Transform Car;
+    public Transform Trigger;
+    public Transform RedCube;
     public static bool GameIsPaused = false;
     public GameObject pauseMenu;
     public bool GameIsRunning = false;
+    private static int Level;
+    bool FirstLoading = true;
 
-    private int LeftButton = 0;
+    // public Transform[] TriggerPositions = new Transform[6];
+    public Transform[] FinishPositions = new Transform[6];
+
+    public Transform[] CarPositions = new Transform[6];
+
+    public Image CurrentLevel;
+    public Sprite[] Maps = new Sprite[6];
+
+
 
 
     void Start()
     {
+        // CurrentLevel.sprite = levels[];
         GameOver.SetActive(false);
         PauseCanvas.SetActive(false);
         WinCanvas.SetActive(false);
@@ -27,12 +41,27 @@ public class GameManager : MonoBehaviour
         MapObject.SetActive(false);
         YouHaveAnOrder.SetActive(true);
 
+
+
         Time.timeScale = 0;
+        Level = LevelMenu.Level;
+        
+        SetLevel(Level);
     }
+
+    public void SetLevel(int Level)
+    {
+        CurrentLevel.sprite = Maps[Level];
+        Car = CarPositions[Level];
+        Trigger = FinishPositions[Level];
+        RedCube = FinishPositions[Level];
+
+    }
+
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(LeftButton))
+        if (Input.GetKeyDown(KeyCode.Space))
         { 
             if (YouHaveAnOrder.activeSelf)
             { 
@@ -48,7 +77,6 @@ public class GameManager : MonoBehaviour
             }
         }
 
-
         if (Car.position.y < 29)
         {
             GameOver.SetActive(true);
@@ -63,7 +91,6 @@ public class GameManager : MonoBehaviour
                 else Pause();
             }
         }
-
     }
 
     public void OpenMenu()
@@ -74,7 +101,22 @@ public class GameManager : MonoBehaviour
 
     public void TryAgain()
     {
-        Start();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void NextLevel()
+    {
+        if (Level == 5)
+        {
+            // one more scene (congratulations)
+            // мабуть треба зробити так, щоб не було кнопки наступний рівень після 5 рівня
+        } 
+        else
+        {
+            LevelMenu.Level++;
+            FirstLoading = false;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 
     public void Resume()
@@ -101,4 +143,43 @@ public class GameManager : MonoBehaviour
     {
         WinCanvas.SetActive(true);
     }
+
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class LevelData
+{
+    int numberOfLevels = 5;
+
+    public Image CurrentLevel;
+    public Sprite[] levels = new Sprite[5];
+    public Transform[] car = new Transform[5];
+    public Transform[] trigger = new Transform[5];
+    public Transform[] redPoint = new Transform[5];
+
+
+    LevelData()
+    {
+        
+    }
+
+
 }
