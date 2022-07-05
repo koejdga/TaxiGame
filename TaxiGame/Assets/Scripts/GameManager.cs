@@ -32,7 +32,6 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        // CurrentLevel.sprite = levels[];
         GameOver.SetActive(false);
         PauseCanvas.SetActive(false);
         WinCanvas.SetActive(false);
@@ -40,8 +39,6 @@ public class GameManager : MonoBehaviour
         MapCanvas.SetActive(true);
         MapObject.SetActive(false);
         YouHaveAnOrder.SetActive(true);
-
-
 
         Time.timeScale = 0;
         Level = LevelMenu.Level;
@@ -61,6 +58,9 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(Car.position.x);
+        Debug.Log(Car.position.y);
+        Debug.Log(Car.position.z);
         if (Input.GetKeyDown(KeyCode.Space))
         { 
             if (YouHaveAnOrder.activeSelf)
@@ -80,6 +80,7 @@ public class GameManager : MonoBehaviour
         if (Car.position.y < 29)
         {
             GameOver.SetActive(true);
+            Debug.Log(GameOver.activeSelf + " - чи активна сцена");
         }
 
 

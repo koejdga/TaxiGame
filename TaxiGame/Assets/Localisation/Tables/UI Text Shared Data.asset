@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: UI Text Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: UI Text
+  m_TableCollectionNameGuidString: 76fd4763541ffe642abaf13af80ed850
+  m_Entries:
+  - m_Id: 638415265792
+    m_Key: 'NextLevelText
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1080994029568
+    m_Key: MenuText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1118671462400
+    m_Key: YouWinText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1157661712384
+    m_Key: GoodJobText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2823358242816
+    m_Key: YouHaveAnOrderText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3029130797056
+    m_Key: LookRouteText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4152109555712
+    m_Key: ResumeText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4241251098624
+    m_Key: ExitText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4245273436160
+    m_Key: YouFellText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5161246515200
+    m_Key: GameOverText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5327307399168
+    m_Key: TryAgainText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6697972391936
+    m_Key: PlayText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6802796437504
+    m_Key: LevelsText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7109119041536
+    m_Key: BackText
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 6167718302638145560
+  references:
+    version: 2
+    RefIds:
+    - rid: 6167718302638145560
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1657043724005
