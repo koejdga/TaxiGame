@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public GameObject GameOver;
     public GameObject WinCanvas;
     public GameObject PauseCanvas;
+    public GameObject CongratsCanvas;
 
     public Transform Trigger;
     public Transform RedCube;
@@ -38,6 +39,7 @@ public class GameManager : MonoBehaviour
         GameOver.SetActive(false);
         PauseCanvas.SetActive(false);
         WinCanvas.SetActive(false);
+        CongratsCanvas.SetActive(false);
 
         MapCanvas.SetActive(true);
         MapObject.SetActive(false);
@@ -124,8 +126,7 @@ public class GameManager : MonoBehaviour
     {
         if (Level == 5)
         {
-            // one more scene (congratulations)
-            // мабуть треба зробити так, щоб не було кнопки наступний рівень після 5 рівня
+            CongratsCanvas.SetActive(true);
         } 
         else
         {
@@ -157,9 +158,13 @@ public class GameManager : MonoBehaviour
 
     public void CompleteLevel()
     {
-        WinCanvas.SetActive(true);
+        if (Level != 5)
+        {
+            WinCanvas.SetActive(true);
+        }
+        else
+        {
+            CongratsCanvas.SetActive(true);
+        }
     }
-
-
-    
 }

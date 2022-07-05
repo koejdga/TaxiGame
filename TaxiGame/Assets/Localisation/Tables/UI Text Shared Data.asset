@@ -73,6 +73,14 @@ MonoBehaviour:
     m_Key: BackText
     m_Metadata:
       m_Items: []
+  - m_Id: 82675834806272
+    m_Key: CongratulationsText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 82774220595200
+    m_Key: GameCompleteText
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
