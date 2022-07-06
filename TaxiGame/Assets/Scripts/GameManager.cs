@@ -25,8 +25,8 @@ public class GameManager : MonoBehaviour
     public GameObject[] Triggers = new GameObject[6];
     private GameObject CurrentTrigger;
 
-    public GameObject[] RedCubes = new GameObject[6];
-    private GameObject CurrentCube;
+    public GameObject[] Cones = new GameObject[6];
+    private GameObject CurrentCone;
 
     public Image CurrentLevel;
     public Sprite[] Maps = new Sprite[6];
@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
         Level = LevelMenu.Level;
 
         CurrentCar = Cars[1];
-        CurrentCube = RedCubes[1];
+        CurrentCone = Cones[1];
         CurrentTrigger = Triggers[1];
 
         SetLevel(Level);
@@ -58,17 +58,17 @@ public class GameManager : MonoBehaviour
     public void SetLevel(int Level)
     {
         CurrentCar.SetActive(false);
-        CurrentCube.SetActive(false);
+        CurrentCone.SetActive(false);
         CurrentTrigger.SetActive(false);
 
         CurrentLevel.sprite = Maps[Level];
 
         Cars[Level].SetActive(true);
-        RedCubes[Level].SetActive(true);
+        Cones[Level].SetActive(true);
         Triggers[Level].SetActive(true);
 
         CurrentCar = Cars[Level];
-        CurrentCube = RedCubes[Level];
+        CurrentCone = Cones[Level];
         CurrentTrigger = Triggers[Level];
 
         Debug.Log(CurrentCar);
