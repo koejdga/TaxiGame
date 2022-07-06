@@ -82,6 +82,26 @@ MonoBehaviour:
     m_Localized: GAME COMPLETE
     m_Metadata:
       m_Items: []
+  - m_Id: 93111498039296
+    m_Localized: you are taxist
+    m_Metadata:
+      m_Items: []
+  - m_Id: 93175217905664
+    m_Localized: press awsd and esc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 93205425283072
+    m_Localized: 'attention
+
+      notice
+
+      progress is not saved'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 94385119420416
+    m_Localized: RULES
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

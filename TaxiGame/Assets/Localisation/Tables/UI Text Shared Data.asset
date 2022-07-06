@@ -81,6 +81,22 @@ MonoBehaviour:
     m_Key: GameCompleteText
     m_Metadata:
       m_Items: []
+  - m_Id: 93111498039296
+    m_Key: GoalText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 93175217905664
+    m_Key: RulesText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 93205425283072
+    m_Key: RemarkText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 94385119420416
+    m_Key: RulesButton
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
