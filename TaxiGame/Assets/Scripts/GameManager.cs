@@ -12,12 +12,12 @@ public class GameManager : MonoBehaviour
     public GameObject PauseCanvas;
     public GameObject CongratsCanvas;
 
-    public Transform Trigger;
-    public Transform RedCube;
     public static bool GameIsPaused = false;
     public GameObject pauseMenu;
     public bool GameIsRunning = false;
     private static int Level;
+    public ScrollRect MapScrollRect;
+
 
     public GameObject[] Cars = new GameObject[6];
     private GameObject CurrentCar;
@@ -28,7 +28,13 @@ public class GameManager : MonoBehaviour
     public GameObject[] Cones = new GameObject[6];
     private GameObject CurrentCone;
 
-    public Image CurrentLevel;
+    public Image CurrentMap;
+    public Image CurrentMap_2lvl;
+    public Image CurrentMap_3lvl;
+    public GameObject Map;
+    public GameObject Map_2lvl;
+    public GameObject Map_3lvl;
+
     public Sprite[] Maps = new Sprite[6];
 
     public bool FirstLoading;
@@ -44,6 +50,10 @@ public class GameManager : MonoBehaviour
         MapCanvas.SetActive(true);
         MapObject.SetActive(false);
         YouHaveAnOrder.SetActive(true);
+
+        Map.SetActive(false);
+        Map_2lvl.SetActive(false);
+        Map_3lvl.SetActive(false);
 
         Time.timeScale = 0;
         Level = LevelMenu.Level;
@@ -61,20 +71,30 @@ public class GameManager : MonoBehaviour
         CurrentCone.SetActive(false);
         CurrentTrigger.SetActive(false);
 
-        CurrentLevel.sprite = Maps[Level];
-
         Cars[Level].SetActive(true);
         Cones[Level].SetActive(true);
         Triggers[Level].SetActive(true);
 
+        if (Level == 2)
+        {
+            Map_2lvl.SetActive(true);
+            MapScrollRect.content = CurrentMap_2lvl.rectTransform;
+        }
+        else if (Level == 3)
+        {
+            Map_3lvl.SetActive(true);
+            MapScrollRect.content = CurrentMap_3lvl.rectTransform;
+        }
+        else
+        {
+            Map.SetActive(true);
+            MapScrollRect.content = CurrentMap.rectTransform;
+            CurrentMap.sprite = Maps[Level];
+        }
+
         CurrentCar = Cars[Level];
         CurrentCone = Cones[Level];
         CurrentTrigger = Triggers[Level];
-
-        Debug.Log(CurrentCar);
-        Debug.Log(Cars[Level]);
-        Debug.Log("Hello world");
-
     }
 
 
