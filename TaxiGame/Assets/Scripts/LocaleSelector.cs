@@ -16,6 +16,7 @@ public class LocaleSelector : MonoBehaviour
         }
         localeID = LocaleID;
         StartCoroutine(SetLocale(LocaleID));
+
     }
 
     IEnumerator SetLocale(int localeID)

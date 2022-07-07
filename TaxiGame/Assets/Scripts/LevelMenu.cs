@@ -21,7 +21,6 @@ public class LevelMenu : MonoBehaviour
 
     private void LoadLevel(int level)
     {
-        Debug.Log("рівень під час завантаження рівня " + SaveSystem.LastCompleteLevel);
         if (level < SaveSystem.LastCompleteLevel + 2)
         {
             Level = level;

@@ -11,8 +11,6 @@ public class ProgressData
     public ProgressData()
     {
         LocaleID = LocaleSelector.localeID;
-        Debug.Log("збережено локаль id " + LocaleID);
         SaveSystem.LastCompleteLevel = lastCompleteLevel;
-        Debug.Log("збережено останній рівень " + lastCompleteLevel);
     }
 }

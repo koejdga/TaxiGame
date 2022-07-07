@@ -5,7 +5,7 @@ public class MainMenu : MonoBehaviour
 
     public void quitGame()
     {
-        SaveProgress();
+        // SaveProgress();
         Application.Quit();
         
     }

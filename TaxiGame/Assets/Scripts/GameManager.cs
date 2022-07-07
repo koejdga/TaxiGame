@@ -61,9 +61,9 @@ public class GameManager : MonoBehaviour
         CurrentCone = Cones[1];
         CurrentTrigger = Triggers[1];
 
-        // LoadProgress();
-
         SetLevel(Level);
+
+        CompleteLevel();
     }
 
     public void SetLevel(int Level)
@@ -173,7 +173,7 @@ public class GameManager : MonoBehaviour
 
     public void QuitGame()
     {
-        SaveProgress();
+        // SaveProgress();
         Application.Quit();
     }
 
@@ -182,6 +182,9 @@ public class GameManager : MonoBehaviour
         if (Level != 5)
         {
             WinCanvas.SetActive(true);
+            StarAnimation starAnimation = gameObject.AddComponent<StarAnimation>();
+            starAnimation.ShowStars();
+
         }
         else
         {
