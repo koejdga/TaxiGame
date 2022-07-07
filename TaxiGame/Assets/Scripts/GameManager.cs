@@ -14,7 +14,6 @@ public class GameManager : MonoBehaviour
 
     public static bool GameIsPaused = false;
     public GameObject pauseMenu;
-    public bool GameIsRunning = false;
     private static int Level;
     public ScrollRect MapScrollRect;
 
@@ -62,6 +61,8 @@ public class GameManager : MonoBehaviour
         CurrentCone = Cones[1];
         CurrentTrigger = Triggers[1];
 
+        // LoadProgress();
+
         SetLevel(Level);
     }
 
@@ -95,6 +96,7 @@ public class GameManager : MonoBehaviour
         CurrentCar = Cars[Level];
         CurrentCone = Cones[Level];
         CurrentTrigger = Triggers[Level];
+
     }
 
 
@@ -112,22 +114,18 @@ public class GameManager : MonoBehaviour
                 MapObject.SetActive(false);
                 MapCanvas.SetActive(false);
                 Time.timeScale = 1;
-                GameIsRunning = true;
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (GameIsPaused) Resume();
+            else Pause();
         }
 
         if (CurrentCar.transform.position.y < 29)
         {
             GameOver.SetActive(true);
-        }
-
-        if (GameIsRunning)
-        {
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                if (GameIsPaused) Resume();
-                else Pause();
-            }
         }
     }
 
@@ -152,7 +150,9 @@ public class GameManager : MonoBehaviour
         {
             LevelMenu.Level++;
             FirstLoading = false;
+            Debug.Log(SaveSystem.LastCompleteLevel + " рівень до завантаження сцени нового рівня");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            Debug.Log(SaveSystem.LastCompleteLevel + " рівень після завантаження сцени нового рівня");
         }
     }
 
@@ -173,6 +173,7 @@ public class GameManager : MonoBehaviour
 
     public void QuitGame()
     {
+        SaveProgress();
         Application.Quit();
     }
 
@@ -185,6 +186,21 @@ public class GameManager : MonoBehaviour
         else
         {
             CongratsCanvas.SetActive(true);
+        }
+    }
+
+    void SaveProgress()
+    {
+        SaveSystem.SaveProgress();
+    }
+
+    void LoadProgress()
+    {
+        ProgressData data = SaveSystem.LoadProgress() as ProgressData;
+        if (data != null)
+        {
+            LocaleSelector.localeID = data.LocaleID;
+            SaveSystem.LastCompleteLevel = data.lastCompleteLevel;
         }
     }
 }
