@@ -22,7 +22,7 @@ public static class SaveSystem
 
     public static ProgressData LoadProgress()
     {
-        string path = Application.persistentDataPath + "/progress.fun";
+        string path = Application.persistentDataPath + "/progress.txt";
         if (File.Exists(path))
         {
             BinaryFormatter formatter = new BinaryFormatter();

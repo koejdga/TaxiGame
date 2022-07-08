@@ -26,8 +26,6 @@ public class LevelMenu : MonoBehaviour
 
     private void Awake()
     {
-        // level1.onClick.AddListener(NoParamaterOnclick);
-
         levels[1].onClick.AddListener(delegate { LoadLevel(1); });
         levels[2].onClick.AddListener(delegate { LoadLevel(2); });
         levels[3].onClick.AddListener(delegate { LoadLevel(3); });

@@ -39,7 +39,6 @@ public class GameManager : MonoBehaviour
 
     public Sprite[] Maps = new Sprite[6];
 
-    public bool FirstLoading;
     Dictionary<int, int> threeStars = new Dictionary<int, int>();
     Dictionary<int, int> twoStars = new Dictionary<int, int>();
 
@@ -164,9 +163,7 @@ public class GameManager : MonoBehaviour
         else
         {
             LevelMenu.Level++;
-            Debug.Log(SaveSystem.LastCompleteLevel + " рівень до завантаження сцени нового рівня");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            Debug.Log(SaveSystem.LastCompleteLevel + " рівень після завантаження сцени нового рівня");
         }
     }
 
@@ -241,9 +238,6 @@ public class GameManager : MonoBehaviour
             MenuButton.SetActive(false);
             ContinueButton.SetActive(true);
         }
-
-        // StarAnimation starAnimation = gameObject.AddComponent<StarAnimation>();
-        // starAnimation.ShowStars();
     }
 
     void SaveProgress()

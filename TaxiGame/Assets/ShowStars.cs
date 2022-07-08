@@ -11,12 +11,6 @@ public class ShowStars : MonoBehaviour
     public void DisplayStars(int num)
     {
         Star1.SetActive(true);
-        /* Star2.SetActive(false);
-        Star3.SetActive(false);
-        if (num > 0)
-        {
-            Star1.SetActive(true);
-        } */
         if (num > 1)
         {
             Star2.SetActive(true);
