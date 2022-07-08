@@ -83,27 +83,23 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 93111498039296
-    m_Localized: you are taxist
-    m_Metadata:
-      m_Items: []
-  - m_Id: 93175217905664
-    m_Localized: press awsd and esc
-    m_Metadata:
-      m_Items: []
-  - m_Id: 93205425283072
-    m_Localized: 'attention
+    m_Localized: 'You are a taxi driver. Your goal is to reach the destination. However
+      you can look through the map only once! So pay enough attention on it. Good
+      luck!
 
-      notice
 
-      progress is not saved'
+      Press ASWD or arrows to move your car
+
+      Press esc to pause
+      the game
+
+
+      Notice that if you exit the level before completing it, your
+      progress will be lost'
     m_Metadata:
       m_Items: []
   - m_Id: 94385119420416
     m_Localized: RULES
-    m_Metadata:
-      m_Items: []
-  - m_Id: 599406105845760
-    m_Localized: press space to continue
     m_Metadata:
       m_Items: []
   - m_Id: 936685856874496

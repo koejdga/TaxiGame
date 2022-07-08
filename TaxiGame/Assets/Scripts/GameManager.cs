@@ -45,8 +45,8 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        threeStars[1] = 23;
-        threeStars[2] = 45;
+        threeStars[1] = 20;
+        threeStars[2] = 43;
         threeStars[3] = 60;
         threeStars[4] = 90;
         threeStars[5] = 120;
@@ -172,6 +172,8 @@ public class GameManager : MonoBehaviour
 
     public void Resume()
     {
+        stopwatch.StartStopwatch();
+
         pauseMenu.SetActive(false);
         Time.timeScale = 1;
         GameIsPaused = false;
@@ -179,6 +181,8 @@ public class GameManager : MonoBehaviour
 
     void Pause()
     {
+        stopwatch.StopStopwatch();
+
         PauseCanvas.SetActive(true);
         pauseMenu.SetActive(true);
         Time.timeScale = 0;

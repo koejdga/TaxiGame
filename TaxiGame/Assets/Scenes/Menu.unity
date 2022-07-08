@@ -319,7 +319,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 90.000015}
+  m_AnchoredPosition: {x: 0, y: 85}
   m_SizeDelta: {x: 293.6034, y: 57.882}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &59150793
@@ -1279,8 +1279,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -317, y: -136}
-  m_SizeDelta: {x: -656.1198, y: -316.0941}
+  m_AnchoredPosition: {x: -314.86316, y: -173.75099}
+  m_SizeDelta: {x: -651.8461, y: -391.5961}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &251141263
 MonoBehaviour:
@@ -1700,7 +1700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -2673,7 +2673,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &882716972
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4736,8 +4736,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -7, y: -210.20386}
-  m_SizeDelta: {x: -21, y: 420.4071}
+  m_AnchoredPosition: {x: -7, y: -176.09651}
+  m_SizeDelta: {x: -21, y: 352.1923}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1689442759
 MonoBehaviour:
@@ -5101,7 +5101,7 @@ RectTransform:
   m_Father: {fileID: 1110906903}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5156701}
+  m_AnchorMin: {x: 0, y: 0.43527615}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -6141,7 +6141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1897729895
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6625,7 +6625,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 34.55
+  m_fontSize: 35.7
   m_fontSizeBase: 38.9
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6758,8 +6758,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1717758426}
   m_HandleRect: {fileID: 1717758425}
   m_Direction: 2
-  m_Value: 1.0000007
-  m_Size: 0.48432988
+  m_Value: 1.000001
+  m_Size: 0.56472385
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
