@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -11,6 +12,8 @@ public class GameManager : MonoBehaviour
     public GameObject WinCanvas;
     public GameObject PauseCanvas;
     public GameObject CongratsCanvas;
+
+    public Stopwatch stopwatch;
 
     public static bool GameIsPaused = false;
     public GameObject pauseMenu;
@@ -37,10 +40,23 @@ public class GameManager : MonoBehaviour
     public Sprite[] Maps = new Sprite[6];
 
     public bool FirstLoading;
-
+    Dictionary<int, int> threeStars = new Dictionary<int, int>();
+    Dictionary<int, int> twoStars = new Dictionary<int, int>();
 
     void Start()
     {
+        threeStars[1] = 23;
+        threeStars[2] = 45;
+        threeStars[3] = 60;
+        threeStars[4] = 90;
+        threeStars[5] = 120;
+
+        twoStars[1] = 28;
+        twoStars[2] = 60;
+        twoStars[3] = 70;
+        twoStars[4] = 100;
+        twoStars[5] = 140;
+
         GameOver.SetActive(false);
         PauseCanvas.SetActive(false);
         WinCanvas.SetActive(false);
@@ -62,8 +78,6 @@ public class GameManager : MonoBehaviour
         CurrentTrigger = Triggers[1];
 
         SetLevel(Level);
-
-        CompleteLevel();
     }
 
     public void SetLevel(int Level)
@@ -114,6 +128,7 @@ public class GameManager : MonoBehaviour
                 MapObject.SetActive(false);
                 MapCanvas.SetActive(false);
                 Time.timeScale = 1;
+                stopwatch.StartStopwatch();
             }
         }
 
@@ -149,7 +164,6 @@ public class GameManager : MonoBehaviour
         else
         {
             LevelMenu.Level++;
-            FirstLoading = false;
             Debug.Log(SaveSystem.LastCompleteLevel + " рівень до завантаження сцени нового рівня");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             Debug.Log(SaveSystem.LastCompleteLevel + " рівень після завантаження сцени нового рівня");
@@ -177,19 +191,55 @@ public class GameManager : MonoBehaviour
         Application.Quit();
     }
 
+    int LastLevel = 5;
+    public GameObject Star1;
+    public GameObject Star2;
+    public GameObject Star3;
+
+    public GameObject NextLevelButton;
+    public GameObject MenuButton;
+    public GameObject ContinueButton;
+
+    public static int[] AmountOfStars = new int[6];
+
     public void CompleteLevel()
     {
-        if (Level != 5)
-        {
-            WinCanvas.SetActive(true);
-            StarAnimation starAnimation = gameObject.AddComponent<StarAnimation>();
-            starAnimation.ShowStars();
+        stopwatch.StopStopwatch();
+        float time = stopwatch.CurrentTime;
+        Debug.Log("час проходження" + time);
 
+        WinCanvas.SetActive(true);
+        if (time < threeStars[Level])
+        {
+            AmountOfStars[Level] = 3;
+            Star1.SetActive(true);
+            Star2.SetActive(true);
+            Star3.SetActive(true);
+        }
+        else if (time < twoStars[Level])
+        {
+            if (AmountOfStars[Level] == 1)
+            {
+                AmountOfStars[Level] = 2;
+            }
+            Star1.SetActive(true);
+            Star2.SetActive(true);
         }
         else
         {
-            CongratsCanvas.SetActive(true);
+            AmountOfStars[Level] = 1;
+            Star1.SetActive(true);
         }
+
+        if (LevelMenu.Level == LastLevel && SaveSystem.LastCompleteLevel != LastLevel)
+        {
+            NextLevelButton.SetActive(false);
+            MenuButton.SetActive(false);
+            ContinueButton.SetActive(true);
+        }
+
+        // StarAnimation starAnimation = gameObject.AddComponent<StarAnimation>();
+        // starAnimation.ShowStars();
     }
 
     void SaveProgress()

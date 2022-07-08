@@ -101,6 +101,10 @@ MonoBehaviour:
     m_Key: PressSpaceText
     m_Metadata:
       m_Items: []
+  - m_Id: 936685856874496
+    m_Key: ContinueText
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

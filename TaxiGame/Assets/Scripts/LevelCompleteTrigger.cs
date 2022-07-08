@@ -6,10 +6,11 @@ public class LevelCompleteTrigger : MonoBehaviour
 
     void OnTriggerEnter()
     {
+        GameManager.CompleteLevel();
         if (LevelMenu.Level > SaveSystem.LastCompleteLevel)
         {
             SaveSystem.LastCompleteLevel++;
+            Debug.Log(SaveSystem.LastCompleteLevel);
         }
-        GameManager.CompleteLevel();
     }
 }

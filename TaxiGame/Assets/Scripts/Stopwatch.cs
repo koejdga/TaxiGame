@@ -7,8 +7,7 @@ using UnityEngine.UI;
 public class Stopwatch : MonoBehaviour
 {
     bool StopwatchActive;
-    float CurrentTime;
-    public Text CurrentTimeText;
+    public float CurrentTime;
 
     void Start()
     {
@@ -21,8 +20,6 @@ public class Stopwatch : MonoBehaviour
         {
             CurrentTime += Time.deltaTime;
         }
-        TimeSpan time = TimeSpan.FromSeconds(CurrentTime);
-        CurrentTimeText.text = time.ToString(@"mm\:ss\:fff");
     }
 
     public void StartStopwatch()

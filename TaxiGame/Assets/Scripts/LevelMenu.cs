@@ -7,6 +7,17 @@ public class LevelMenu : MonoBehaviour
     
     public static int Level;
     public Button[] levels = new Button[6];
+    public ShowStars[] ShowStarsOfLevel = new ShowStars[6];
+
+
+    private void Start()
+    {
+        for (int level = 1; level < SaveSystem.LastCompleteLevel + 1; level++)
+        {
+            ShowStarsOfLevel[level].DisplayStars(GameManager.AmountOfStars[level]);
+        }
+    }
+
 
     private void Awake()
     {
