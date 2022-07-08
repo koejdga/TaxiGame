@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1784204
 RectTransform:
   m_ObjectHideFlags: 0
@@ -476,7 +476,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &97598134
 RectTransform:
   m_ObjectHideFlags: 0
@@ -674,7 +674,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &146713868
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1119,7 +1119,7 @@ GameObject:
   - component: {fileID: 242320718}
   - component: {fileID: 242320717}
   m_Layer: 5
-  m_Name: LevelText
+  m_Name: LevelText3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1174,8 +1174,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278232575
-  m_fontColor: {r: 1, g: 0.64705884, b: 0, a: 1}
+    rgba: 4282417830
+  m_fontColor: {r: 0.6509434, g: 0.5095095, b: 0.24973296, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1412,7 +1412,7 @@ GameObject:
   - component: {fileID: 257042585}
   - component: {fileID: 257042584}
   m_Layer: 5
-  m_Name: LevelText
+  m_Name: LevelText2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1467,8 +1467,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278232575
-  m_fontColor: {r: 1, g: 0.64705884, b: 0, a: 1}
+    rgba: 4282417830
+  m_fontColor: {r: 0.6509804, g: 0.50980395, b: 0.2509804, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1593,7 +1593,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &357075814
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2126,7 +2126,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -10.091095, y: 0}
+  m_AnchoredPosition: {x: -10.091064, y: 0}
   m_SizeDelta: {x: -20.1823, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &664975105
@@ -2176,7 +2176,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &681373824
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2374,7 +2374,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &694962638
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2577,8 +2577,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Star1: {fileID: 1905415046}
-  Star2: {fileID: 1442802062}
-  Star3: {fileID: 681373823}
+  Star2: {fileID: 681373823}
+  Star3: {fileID: 1442802062}
 --- !u!1 &852969958
 GameObject:
   m_ObjectHideFlags: 0
@@ -3003,7 +3003,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1123419155
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3225,7 +3225,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1249979769
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3471,8 +3471,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Star1: {fileID: 146713867}
-  Star2: {fileID: 1422788759}
-  Star3: {fileID: 1437092443}
+  Star2: {fileID: 1437092443}
+  Star3: {fileID: 1422788759}
 --- !u!1 &1322392311
 GameObject:
   m_ObjectHideFlags: 0
@@ -3824,8 +3824,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Star1: {fileID: 1784203}
-  Star2: {fileID: 1784504401}
-  Star3: {fileID: 2100299219}
+  Star2: {fileID: 2100299219}
+  Star3: {fileID: 1784504401}
 --- !u!1 &1422788759
 GameObject:
   m_ObjectHideFlags: 0
@@ -3843,7 +3843,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1422788760
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3919,7 +3919,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1437092444
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3995,7 +3995,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1442802063
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4201,7 +4201,7 @@ GameObject:
   - component: {fileID: 1458759528}
   - component: {fileID: 1458759527}
   m_Layer: 5
-  m_Name: LevelText
+  m_Name: LevelText5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4258,8 +4258,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278232575
-  m_fontColor: {r: 1, g: 0.64705884, b: 0, a: 1}
+    rgba: 4282417830
+  m_fontColor: {r: 0.6509804, g: 0.50980395, b: 0.2509804, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5428,8 +5428,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Star1: {fileID: 357075813}
-  Star2: {fileID: 1818888857}
-  Star3: {fileID: 1123419154}
+  Star2: {fileID: 1123419154}
+  Star3: {fileID: 1818888857}
 --- !u!1 &1784504401
 GameObject:
   m_ObjectHideFlags: 0
@@ -5447,7 +5447,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1784504402
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5657,7 +5657,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1818888858
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5728,7 +5728,7 @@ GameObject:
   - component: {fileID: 1824743268}
   - component: {fileID: 1824743267}
   m_Layer: 5
-  m_Name: LevelText
+  m_Name: LevelText4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5785,8 +5785,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278232575
-  m_fontColor: {r: 1, g: 0.64705884, b: 0, a: 1}
+    rgba: 4282417830
+  m_fontColor: {r: 0.6509804, g: 0.50980395, b: 0.2509804, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5865,7 +5865,7 @@ GameObject:
   - component: {fileID: 1892702009}
   - component: {fileID: 1892702008}
   m_Layer: 5
-  m_Name: LevelText
+  m_Name: LevelText1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6196,6 +6196,13 @@ MonoBehaviour:
   - {fileID: 726439245}
   - {fileID: 1411503285}
   - {fileID: 1316176826}
+  levelTexts:
+  - {fileID: 1892702008}
+  - {fileID: 1892702008}
+  - {fileID: 257042584}
+  - {fileID: 242320717}
+  - {fileID: 1824743267}
+  - {fileID: 1458759527}
 --- !u!1 &1905415046
 GameObject:
   m_ObjectHideFlags: 0
@@ -6213,7 +6220,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1905415047
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6812,7 +6819,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2100299220
 RectTransform:
   m_ObjectHideFlags: 0

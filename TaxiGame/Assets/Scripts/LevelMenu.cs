@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -8,14 +9,18 @@ public class LevelMenu : MonoBehaviour
     public static int Level;
     public Button[] levels = new Button[6];
     public ShowStars[] ShowStarsOfLevel = new ShowStars[6];
-
+    public TextMeshProUGUI[] levelTexts = new TextMeshProUGUI[6];
+    private Color32 availableLevelColor = new(255, 165, 0, 255);
 
     private void Start()
     {
         for (int level = 1; level < SaveSystem.LastCompleteLevel + 1; level++)
         {
+            levelTexts[level].color = availableLevelColor;
             ShowStarsOfLevel[level].DisplayStars(GameManager.AmountOfStars[level]);
         }
+
+        levelTexts[SaveSystem.LastCompleteLevel + 1].color = availableLevelColor;
     }
 
 
