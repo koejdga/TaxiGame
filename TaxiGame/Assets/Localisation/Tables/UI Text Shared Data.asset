@@ -93,6 +93,10 @@ MonoBehaviour:
     m_Key: ContinueText
     m_Metadata:
       m_Items: []
+  - m_Id: 1165957141880832
+    m_Key: ResetText
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

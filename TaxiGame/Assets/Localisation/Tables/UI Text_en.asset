@@ -106,6 +106,10 @@ MonoBehaviour:
     m_Localized: CONTINUE
     m_Metadata:
       m_Items: []
+  - m_Id: 1165957141880832
+    m_Localized: RESET PROGRESS
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

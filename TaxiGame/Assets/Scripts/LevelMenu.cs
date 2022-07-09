@@ -11,9 +11,30 @@ public class LevelMenu : MonoBehaviour
     public ShowStars[] ShowStarsOfLevel = new ShowStars[6];
     public TextMeshProUGUI[] levelTexts = new TextMeshProUGUI[6];
     private Color32 availableLevelColor = new(255, 165, 0, 255);
+    public Color32 unavailableLevelColor = new(166, 130, 64, 255);
+
+   public static bool isReset = false;
+
+   public void CloseStarSets(int level)
+    {
+        ShowStarsOfLevel[level].CloseStars();
+    }
 
     private void Start()
     {
+        SaveSystem.LoadProgress();
+
+        if (isReset)
+        {
+            for (int level = 2; level < 6; level++)
+            {
+                levelTexts[level].color = unavailableLevelColor;
+                CloseStarSets(level);
+            }
+        }
+
+        isReset = false;
+
         for (int level = 1; level < SaveSystem.LastCompleteLevel + 1; level++)
         {
             levelTexts[level].color = availableLevelColor;

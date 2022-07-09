@@ -6,39 +6,62 @@ public static class SaveSystem
 {
 
     public static int LastCompleteLevel = 0;
+    public static int[] LevelStars = new int[6];
 
-    public static void SaveProgress()
+    public static void SaveLastCompleteLevel()
     {
-        BinaryFormatter formatter = new BinaryFormatter();
-        string path = Application.persistentDataPath + "/progress.fun";
-        FileStream stream = new FileStream(path, FileMode.Create);
-
-        ProgressData data = new ProgressData();
-
-        formatter.Serialize(stream, data);
-        stream.Close();
-
+        PlayerPrefs.SetInt("LastComleteLevel", LastCompleteLevel);
     }
 
-    public static ProgressData LoadProgress()
+    public static void SaveLevelStars(int Level, int LevelStars)
     {
-        string path = Application.persistentDataPath + "/progress.txt";
-        if (File.Exists(path))
+        if (Level == 1)
         {
-            BinaryFormatter formatter = new BinaryFormatter();
-
-            FileStream stream = new FileStream(path, FileMode.Open);
-            ProgressData data = formatter.Deserialize(stream) as ProgressData;
-
-            stream.Close();
-            return data;
-
+            PlayerPrefs.SetInt("1levelStars", LevelStars);
         }
-        else
+        else if (Level == 2)
         {
-            Debug.Log("нічого не завантажилося, немає файлу");
-            return null;
+            PlayerPrefs.SetInt("2levelStars", LevelStars);
         }
+        else if (Level == 3)
+        {
+            PlayerPrefs.SetInt("3levelStars", LevelStars);
+        }
+        else if (Level == 4)
+        {
+            PlayerPrefs.SetInt("4levelStars", LevelStars);
+        }
+        else if (Level == 5)
+        {
+            PlayerPrefs.SetInt("5levelStars", LevelStars);
+        }
+    }
 
+    public static void LoadProgress()
+    {
+        LastCompleteLevel = PlayerPrefs.GetInt("LastComleteLevel", 0);
+        GameManager.AmountOfStars[1] = PlayerPrefs.GetInt("1levelStars", 0);
+        GameManager.AmountOfStars[2] = PlayerPrefs.GetInt("2levelStars", 0);
+        GameManager.AmountOfStars[3] = PlayerPrefs.GetInt("3levelStars", 0);
+        GameManager.AmountOfStars[4] = PlayerPrefs.GetInt("4levelStars", 0);
+        GameManager.AmountOfStars[5] = PlayerPrefs.GetInt("5levelStars", 0);
+    }
+
+    public static void ResetProgress()
+    {
+        LevelMenu.isReset = true;
+
+        PlayerPrefs.SetInt("LastComleteLevel", 0);
+        PlayerPrefs.SetInt("1levelStars", 0);
+        PlayerPrefs.SetInt("2levelStars", 0);
+        PlayerPrefs.SetInt("3levelStars", 0);
+        PlayerPrefs.SetInt("4levelStars", 0);
+        PlayerPrefs.SetInt("5levelStars", 0);
+        LastCompleteLevel = 0;
+        GameManager.AmountOfStars[1] = 0;
+        GameManager.AmountOfStars[2] = 0;
+        GameManager.AmountOfStars[3] = 0;
+        GameManager.AmountOfStars[4] = 0;
+        GameManager.AmountOfStars[5] = 0;
     }
 }

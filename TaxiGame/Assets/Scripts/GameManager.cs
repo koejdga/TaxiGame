@@ -116,12 +116,12 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
-        { 
+        {
             if (YouHaveAnOrder.activeSelf)
-            { 
+            {
                 YouHaveAnOrder.SetActive(false);
                 MapObject.SetActive(true);
-            } 
+            }
             else if (MapObject.activeSelf)
             {
                 MapObject.SetActive(false);
@@ -159,7 +159,7 @@ public class GameManager : MonoBehaviour
         if (Level == 5)
         {
             CongratsCanvas.SetActive(true);
-        } 
+        }
         else
         {
             LevelMenu.Level++;
@@ -188,7 +188,6 @@ public class GameManager : MonoBehaviour
 
     public void QuitGame()
     {
-        // SaveProgress();
         Application.Quit();
     }
 
@@ -212,6 +211,7 @@ public class GameManager : MonoBehaviour
         WinCanvas.SetActive(true);
         if (time < threeStars[Level])
         {
+            SaveSystem.SaveLevelStars(Level, 3);
             AmountOfStars[Level] = 3;
             Star1.SetActive(true);
             Star2.SetActive(true);
@@ -219,6 +219,7 @@ public class GameManager : MonoBehaviour
         }
         else if (time < twoStars[Level])
         {
+            SaveSystem.SaveLevelStars(Level, 2);
             if (AmountOfStars[Level] == 1)
             {
                 AmountOfStars[Level] = 2;
@@ -226,8 +227,9 @@ public class GameManager : MonoBehaviour
             Star1.SetActive(true);
             Star2.SetActive(true);
         }
-        else
+        if (time > twoStars[Level])
         {
+            SaveSystem.SaveLevelStars(Level, 1);
             AmountOfStars[Level] = 1;
             Star1.SetActive(true);
         }
@@ -237,21 +239,6 @@ public class GameManager : MonoBehaviour
             NextLevelButton.SetActive(false);
             MenuButton.SetActive(false);
             ContinueButton.SetActive(true);
-        }
-    }
-
-    void SaveProgress()
-    {
-        SaveSystem.SaveProgress();
-    }
-
-    void LoadProgress()
-    {
-        ProgressData data = SaveSystem.LoadProgress() as ProgressData;
-        if (data != null)
-        {
-            LocaleSelector.localeID = data.LocaleID;
-            SaveSystem.LastCompleteLevel = data.lastCompleteLevel;
         }
     }
 }

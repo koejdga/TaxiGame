@@ -10,6 +10,7 @@ public class LevelCompleteTrigger : MonoBehaviour
         if (LevelMenu.Level > SaveSystem.LastCompleteLevel)
         {
             SaveSystem.LastCompleteLevel++;
+            SaveSystem.SaveLastCompleteLevel();
             Debug.Log(SaveSystem.LastCompleteLevel);
         }
     }

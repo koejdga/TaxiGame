@@ -8,6 +8,13 @@ public class ShowStars : MonoBehaviour
     public GameObject Star2;
     public GameObject Star3;
 
+    public void CloseStars()
+    {
+        Star1.SetActive(false);
+        Star2.SetActive(false);
+        Star3.SetActive(false);
+    }
+
     public void DisplayStars(int num)
     {
         Star1.SetActive(true);
@@ -20,6 +27,4 @@ public class ShowStars : MonoBehaviour
             Star3.SetActive(true);
         }
     }
-
-
 }
