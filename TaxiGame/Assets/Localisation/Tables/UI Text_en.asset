@@ -96,8 +96,13 @@ MonoBehaviour:
       Press esc to pause the game
 
 
-      Notice that if you
-      exit the level before completing it, your progress will be lost'
+      You can gain one,
+      two or three stars for each level. Amount of stars depends on time you needed
+      to complete level
+
+
+      Notice that if you exit the level before completing
+      it, your progress will be lost'
     m_Metadata:
       m_Items: []
   - m_Id: 94385119420416

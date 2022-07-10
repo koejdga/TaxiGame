@@ -11,7 +11,6 @@ public class LevelCompleteTrigger : MonoBehaviour
         {
             SaveSystem.LastCompleteLevel++;
             SaveSystem.SaveLastCompleteLevel();
-            Debug.Log(SaveSystem.LastCompleteLevel);
         }
     }
 }
