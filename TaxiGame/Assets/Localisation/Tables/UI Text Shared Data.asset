@@ -97,6 +97,10 @@ MonoBehaviour:
     m_Key: ResetText
     m_Metadata:
       m_Items: []
+  - m_Id: 1706725938028544
+    m_Key: PressSpaceText
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

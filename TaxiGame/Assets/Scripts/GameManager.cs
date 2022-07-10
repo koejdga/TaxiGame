@@ -206,7 +206,6 @@ public class GameManager : MonoBehaviour
     {
         stopwatch.StopStopwatch();
         float time = stopwatch.CurrentTime;
-        Debug.Log("час проходження" + time);
 
         WinCanvas.SetActive(true);
         if (time < threeStars[Level])
