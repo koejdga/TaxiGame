@@ -121,6 +121,14 @@ MonoBehaviour:
     m_Localized: press space to continue
     m_Metadata:
       m_Items: []
+  - m_Id: 2594895114264576
+    m_Localized: CHANGE COLOR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2772674426429440
+    m_Localized: Choose color
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

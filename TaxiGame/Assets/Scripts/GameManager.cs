@@ -39,8 +39,9 @@ public class GameManager : MonoBehaviour
 
     public Sprite[] Maps = new Sprite[6];
 
-    Dictionary<int, int> threeStars = new Dictionary<int, int>();
-    Dictionary<int, int> twoStars = new Dictionary<int, int>();
+    Dictionary<int, int> threeStars = new();
+    Dictionary<int, int> twoStars = new();
+
 
     void Start()
     {
@@ -55,6 +56,7 @@ public class GameManager : MonoBehaviour
         twoStars[3] = 70;
         twoStars[4] = 100;
         twoStars[5] = 140;
+
 
         GameOver.SetActive(false);
         PauseCanvas.SetActive(false);
@@ -84,6 +86,7 @@ public class GameManager : MonoBehaviour
         CurrentCar.SetActive(false);
         CurrentCone.SetActive(false);
         CurrentTrigger.SetActive(false);
+
 
         Cars[Level].SetActive(true);
         Cones[Level].SetActive(true);

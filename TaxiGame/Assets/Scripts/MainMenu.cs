@@ -6,12 +6,14 @@ public class MainMenu : MonoBehaviour
     static bool LevelMenuIsLoaded;
     public GameObject LevelMenu;
     public GameObject MenuMenu;
+    public GameObject ColorMenu;
 
     private void Start()
     {
         if (LevelMenuIsLoaded)
         {
             MenuMenu.SetActive(false);
+            ColorMenu.SetActive(false);
             LevelMenu.SetActive(true);
         }
         LevelMenuIsLoaded = false;
@@ -30,7 +32,7 @@ public class MainMenu : MonoBehaviour
         
     }
 
-    public void quitGame()
+    public void QuitGame()
     {
         Application.Quit();
         

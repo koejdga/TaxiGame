@@ -5,6 +5,12 @@ public static class SaveSystem
 
     public static int LastCompleteLevel = 0;
     public static int[] LevelStars = new int[6];
+    public static string CarColor;
+
+    public static void SaveCarColor()
+    {
+        PlayerPrefs.SetString("CarColor", CarColor);
+    }
 
     public static void SaveLastCompleteLevel()
     {
@@ -43,6 +49,7 @@ public static class SaveSystem
         GameManager.AmountOfStars[3] = PlayerPrefs.GetInt("3levelStars", 0);
         GameManager.AmountOfStars[4] = PlayerPrefs.GetInt("4levelStars", 0);
         GameManager.AmountOfStars[5] = PlayerPrefs.GetInt("5levelStars", 0);
+        CarColor = PlayerPrefs.GetString("CarColor", "white");
     }
 
     public static void ResetProgress()
